@@ -11,6 +11,7 @@ const getWeatherData = (infotype, searchParams) => {
 };
 
 const formatCurrentData = (data) => {
+    console.log(data)
   const {
     coord: { lat, lon },
     main: { temp, feels_like, temp_min, temp_max, humidity },
@@ -43,7 +44,6 @@ const formatCurrentData = (data) => {
 };
 
 const formatForecastWeather = (data) => {
-    console.log(data)
   let { timezone, list } = data;
   list = list.slice(1, 6).map((d) => {
     return {
