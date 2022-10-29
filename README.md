@@ -1,17 +1,20 @@
-# Description
+## Description
 
-App for getting information about weather.
+Website for getting information about weather for cureent location or any location you search.
 
 ## How to use
 * git clone the project to your computer
-* install all dependecies
+* install all dependecies with `npm -i`
   #### Materials: 
-  * [Openweather API](https://openweathermap.org/)
   * [Tailwind CSS](https://tailwindcss.com/docs/guides/create-react-app)
   * [IconScout](https://iconscout.com/unicons)
   * [luxon](https://www.npmjs.com/package/luxon)
   * [react-toastify](https://www.npmjs.com/package/react-t...)
 
-In the project directory, you can run:
+* register and get the API_KEY from [Openweather API](https://openweathermap.org/)
+* run `npm start` and enjoy the weather application
 
-### `npm start`
+## Technologies 
+* React
+* Tailwind
+* Toastify library
