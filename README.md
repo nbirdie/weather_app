@@ -2,6 +2,10 @@
 
 Website for getting information about weather for cureent location or any location you search.
 
+![Project](https://raw.githubusercontent.com/nbirdie/weather_app/main/src/images/screenshot.png?token=GHSAT0AAAAAABZXLRNY5KRTECH4CWQGUB3IY25MKEA)
+
+
+
 ## How to use
 * `git clone` the project to your computer
 * install all dependecies with `npm -i`
