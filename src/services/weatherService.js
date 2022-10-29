@@ -44,15 +44,17 @@ const formatCurrentData = (data) => {
 };
 
 const formatForecastWeather = (data) => {
-  let { timezone, list } = data;
-  list = list.slice(1, 6).map((d) => {
+    console.log(data)
+  let { list } = data;
+  let { timezone } = data.city
+  list = list.slice(0, 5).map((d) => {
+    console.log(d.dt)
     return {
       title: formatToLocalTime(d.dt, timezone, "hh:mm a"),
       temp: d.main.temp,
       icon: d.weather[0].icon,
     };
   });
-
   let hourly = list
   return { timezone, hourly };
 };
@@ -74,11 +76,15 @@ const getFormattedWeatherData = async (searchParams) => {
 };
 
 const formatToLocalTime = (
-  secs,
-  zone,
-  format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
-) => DateTime.fromSeconds(secs).setZone(zone).toFormat(format);
+    secs,
+    zone,
+    format = "cccc, dd LLL yyyy' | Local time: 'hh:mm a"
+  ) => {let date = DateTime.fromSeconds(secs).plus({seconds: zone - 3600*3}).toFormat(format)
 
+return date};
+
+console.log(formatToLocalTime(
+    1667066400, 3600))
 
 const iconUrlFromCode = (code) => `http://openweathermap.org/img/wn/${code}@2x.png`;
 
