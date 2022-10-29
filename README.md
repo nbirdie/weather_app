@@ -3,7 +3,7 @@
 Website for getting information about weather for cureent location or any location you search.
 
 ## How to use
-* git clone the project to your computer
+* `git clone` the project to your computer
 * install all dependecies with `npm -i`
   #### Materials: 
   * [Tailwind CSS](https://tailwindcss.com/docs/guides/create-react-app)
